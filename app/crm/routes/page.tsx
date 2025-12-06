@@ -13,7 +13,7 @@ import {
   Filter
 } from 'lucide-react'
 import { getDb } from '@/lib/db'
-import { routes, cleaners, bookings } from '@/lib/schema'
+import { routes, cleaners } from '@/lib/schema'
 import { eq, desc } from 'drizzle-orm'
 import { formatDate } from '@/lib/utils'
 

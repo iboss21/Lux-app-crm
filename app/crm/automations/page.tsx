@@ -11,7 +11,6 @@ import {
   Bell,
   MessageSquare,
   Clock,
-  MoreHorizontal,
   CheckCircle
 } from 'lucide-react'
 import { getDb } from '@/lib/db'

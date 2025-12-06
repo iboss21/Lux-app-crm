@@ -2,14 +2,11 @@
 
 import { useState } from 'react'
 import { 
-  Settings as SettingsIcon,
   Building,
   CreditCard,
   Bell,
-  Mail,
   Users,
   Clock,
-  Palette,
   Shield,
   Save,
   Upload
@@ -474,7 +471,7 @@ function SecuritySettings() {
         </div>
         <div className="card-body">
           <p className="text-gray-600 mb-4">
-            You're currently signed in on this device.
+            You&apos;re currently signed in on this device.
           </p>
           <button className="btn btn-danger text-sm">
             Sign Out All Other Sessions

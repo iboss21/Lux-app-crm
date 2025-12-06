@@ -15,9 +15,9 @@ import {
   BarChart3, 
   Settings,
   MessageSquare,
-  Bell,
   Zap,
-  BookOpen
+  BookOpen,
+  Shield
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -35,6 +35,7 @@ const navigation = [
   { name: 'Automations', href: '/crm/automations', icon: Zap },
   { name: 'Analytics', href: '/crm/analytics', icon: BarChart3 },
   { name: 'Info Portal', href: '/crm/info-portal', icon: BookOpen },
+  { name: 'Audit Logs', href: '/crm/audit-logs', icon: Shield },
   { name: 'Settings', href: '/crm/settings', icon: Settings },
 ]
 

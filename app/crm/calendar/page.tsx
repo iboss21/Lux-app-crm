@@ -7,10 +7,8 @@ import {
   ChevronRight,
   Calendar as CalendarIcon,
   Clock,
-  MapPin,
   User,
-  Plus,
-  Filter
+  Plus
 } from 'lucide-react'
 import { formatDate, getStatusColor } from '@/lib/utils'
 

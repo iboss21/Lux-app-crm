@@ -1,20 +1,17 @@
 import Link from 'next/link'
 import { 
-  BookOpen,
   Search,
   FileText,
-  Video,
   Download,
   ExternalLink,
   ChevronRight,
   Sparkles,
-  CheckCircle,
   Users,
   Calendar,
   DollarSign
 } from 'lucide-react'
 import { getDb } from '@/lib/db'
-import { kbArticles, kbCategories } from '@/lib/schema'
+import { kbArticles } from '@/lib/schema'
 import { desc } from 'drizzle-orm'
 
 interface ArticleData {
@@ -131,7 +128,6 @@ const quickLinks = [
 
 export default async function InfoPortalPage() {
   const articles = await getArticles()
-  const db = getDb()
   
   return (
     <div className="space-y-6 animate-fade-in">
@@ -299,7 +295,7 @@ export default async function InfoPortalPage() {
                 Need Help?
               </h3>
               <p className="text-white/80">
-                Can't find what you're looking for? Contact the support team.
+                Can&apos;t find what you&apos;re looking for? Contact the support team.
               </p>
             </div>
             <button className="btn bg-white text-primary hover:bg-white/90">

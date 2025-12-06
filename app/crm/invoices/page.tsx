@@ -3,8 +3,6 @@ import {
   Plus, 
   Search, 
   FileText,
-  Mail,
-  DollarSign,
   Calendar,
   Eye,
   Send,
@@ -13,9 +11,9 @@ import {
   CheckCircle
 } from 'lucide-react'
 import { getDb } from '@/lib/db'
-import { invoices, customers, bookings } from '@/lib/schema'
+import { invoices, customers } from '@/lib/schema'
 import { eq, desc } from 'drizzle-orm'
-import { formatCurrency, formatDate, getStatusColor } from '@/lib/utils'
+import { formatCurrency, formatDate } from '@/lib/utils'
 
 interface InvoiceData {
   id: string

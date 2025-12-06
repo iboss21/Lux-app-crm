@@ -99,7 +99,7 @@ export default function PortalDashboardPage() {
         {/* Quick actions */}
         <div className="grid grid-cols-2 gap-4">
           <Link
-            href="/booking"
+            href="/portal/book"
             className="bg-gradient-to-r from-primary to-secondary p-4 rounded-xl text-white hover:opacity-90 transition"
           >
             <Plus className="h-6 w-6 mb-2" />
@@ -169,7 +169,7 @@ export default function PortalDashboardPage() {
               <Calendar className="h-12 w-12 text-gray-300 mx-auto mb-3" />
               <p className="text-gray-500">No upcoming bookings</p>
               <Link
-                href="/booking"
+                href="/portal/book"
                 className="inline-block mt-4 px-6 py-2 bg-primary text-white rounded-lg font-medium hover:opacity-90"
               >
                 Book Now

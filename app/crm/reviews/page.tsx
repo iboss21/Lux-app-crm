@@ -4,7 +4,6 @@ import {
   Search, 
   User,
   Calendar,
-  MessageSquare,
   ThumbsUp,
   ThumbsDown,
   Eye,
@@ -12,7 +11,7 @@ import {
   Filter
 } from 'lucide-react'
 import { getDb } from '@/lib/db'
-import { customerReviews, customers, cleaners, bookings } from '@/lib/schema'
+import { customerReviews, customers, cleaners } from '@/lib/schema'
 import { eq, desc } from 'drizzle-orm'
 import { formatDate } from '@/lib/utils'
 
@@ -222,7 +221,7 @@ export default async function ReviewsPage() {
                       
                       {review.comment && (
                         <p className="text-gray-600 mt-3 max-w-2xl">
-                          "{review.comment}"
+                          &ldquo;{review.comment}&rdquo;
                         </p>
                       )}
                       

@@ -3,7 +3,6 @@ import {
   Plus, 
   Search, 
   DollarSign,
-  Calendar,
   User,
   CheckCircle,
   Clock,

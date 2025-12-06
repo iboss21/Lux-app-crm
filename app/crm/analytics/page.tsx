@@ -5,13 +5,11 @@ import Link from 'next/link'
 import { 
   BarChart3,
   TrendingUp,
-  TrendingDown,
   DollarSign,
   Users,
   Calendar,
   Star,
   Download,
-  Filter,
   ArrowUp,
   ArrowDown
 } from 'lucide-react'
