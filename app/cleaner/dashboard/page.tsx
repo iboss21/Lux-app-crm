@@ -6,10 +6,8 @@ import {
   Clock, 
   MapPin, 
   CheckCircle, 
-  AlertCircle,
   ChevronRight,
   User,
-  LogOut,
   Home,
   Briefcase,
   Settings
@@ -64,7 +62,6 @@ export default function CleanerDashboardPage() {
   const [activeTab, setActiveTab] = useState<'today' | 'upcoming' | 'completed'>('today')
   
   const todayJobs = mockJobs.filter(j => j.status !== 'completed')
-  const completedJobs = mockJobs.filter(j => j.status === 'completed')
   
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
@@ -89,7 +86,7 @@ export default function CleanerDashboardPage() {
         <div className="grid grid-cols-3 gap-4 mt-4">
           <div className="bg-white/10 rounded-lg p-3 text-center">
             <div className="text-2xl font-bold">{todayJobs.length}</div>
-            <div className="text-xs text-white/70">Today's Jobs</div>
+            <div className="text-xs text-white/70">Today&apos;s Jobs</div>
           </div>
           <div className="bg-white/10 rounded-lg p-3 text-center">
             <div className="text-2xl font-bold">4.9</div>
