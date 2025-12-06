@@ -135,7 +135,7 @@ export default function CustomerProfilePage() {
                 <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <textarea
                   className="input pl-10 h-24 resize-none"
-                  defaultValue="123 Main Street&#10;Los Angeles, CA 90001"
+                  defaultValue={"123 Main Street\nLos Angeles, CA 90001"}
                 />
               </div>
             </div>
