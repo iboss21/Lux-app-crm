@@ -52,8 +52,9 @@ export async function POST(request: NextRequest) {
     //
     // const photoUrl = `https://${env.AWS_BUCKET_NAME}.s3.${env.AWS_REGION}.amazonaws.com/${key}`
     
-    // Demo mode - generate a placeholder URL
-    const photoUrl = `https://picsum.photos/seed/${Date.now()}/800/600`
+    // Demo mode - generate a placeholder URL with unique seed
+    const uniqueSeed = `${bookingId}-${photoType}-${Date.now()}-${Math.random().toString(36).substring(7)}`
+    const photoUrl = `https://picsum.photos/seed/${uniqueSeed}/800/600`
     
     const db = getDb()
     if (db) {

@@ -177,11 +177,23 @@ export default function CleanerJobDetailPage({ params }: PageProps) {
   
   const removePhoto = (type: 'before' | 'after', index: number) => {
     if (type === 'before') {
+      // Revoke object URL to prevent memory leak
+      URL.revokeObjectURL(beforePhotos[index])
       setBeforePhotos(prev => prev.filter((_, i) => i !== index))
     } else {
+      // Revoke object URL to prevent memory leak
+      URL.revokeObjectURL(afterPhotos[index])
       setAfterPhotos(prev => prev.filter((_, i) => i !== index))
     }
   }
+  
+  // Cleanup object URLs on unmount
+  useEffect(() => {
+    return () => {
+      beforePhotos.forEach(url => URL.revokeObjectURL(url))
+      afterPhotos.forEach(url => URL.revokeObjectURL(url))
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
   
   const openNavigation = () => {
     const address = `${mockJob.address}, ${mockJob.city}, ${mockJob.state} ${mockJob.zipCode}`

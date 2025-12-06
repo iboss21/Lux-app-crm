@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getDb } from '@/lib/db'
 import { bookings, customers } from '@/lib/schema'
-import { eq } from 'drizzle-orm'
+import { eq, desc } from 'drizzle-orm'
 import { z } from 'zod'
 
 // Booking creation schema
@@ -251,6 +251,7 @@ export async function GET(request: NextRequest) {
       allBookings = await db
         .select()
         .from(bookings)
+        .orderBy(desc(bookings.createdAt))
         .limit(limit)
         .offset(offset)
     }
